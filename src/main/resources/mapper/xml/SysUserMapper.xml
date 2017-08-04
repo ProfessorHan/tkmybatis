@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hanfei.mapper.SysUserMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="cn.hanfei.entity.SysUser">
+		<id column="id" property="id" />
+		<result column="email" property="email" />
+		<result column="pwd" property="pwd" />
+		<result column="nickName" property="nickName" />
+		<result column="mobile_phone" property="mobilePhone" />
+		<result column="state" property="state" />
+		<result column="loginCount" property="loginCount" />
+		<result column="loginTime" property="loginTime" />
+		<result column="deleted" property="deleted" />
+		<result column="createTime" property="createTime" />
+		<result column="updateTime" property="updateTime" />
+		<result column="createBy" property="createBy" />
+		<result column="updateBy" property="updateBy" />
+		<result column="superAdmin" property="superAdmin" />
+		<result column="dept_id" property="deptId" />
+		<result column="wx_uuid" property="wxUuid" />
+		<result column="group_id" property="groupId" />
+	</resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, email, pwd, nickName, mobile_phone AS mobilePhone, state, loginCount, loginTime, deleted, createTime, updateTime, createBy, updateBy, superAdmin, dept_id AS deptId, wx_uuid AS wxUuid, group_id AS groupId
+    </sql>
+
+</mapper>
